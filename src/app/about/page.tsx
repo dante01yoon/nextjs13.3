@@ -1,16 +1,10 @@
-import { Metadata } from "next";
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: "About Page",
-  openGraph: {
-    images: [""]
-  }
-}
+
 
 export default function About() {
   return (
@@ -131,3 +125,27 @@ export default function About() {
     </main>
   )
 }
+
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+
+// export async function generateMetadata(
+//   { params, searchParams }: Props,
+//   parent?: ResolvingMetadata,
+// ): Promise<Metadata> {
+//   // read route params
+//   const id = params.id;
+
+//   // fetch data
+
+//   // optionally access and extend (rather than replace) parent metadata
+
+//   return {
+//     title: "config-based metadata",
+    
+//   };
+// }
