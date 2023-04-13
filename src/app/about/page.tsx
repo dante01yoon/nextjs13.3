@@ -1,20 +1,20 @@
 import { Inter } from 'next/font/google';
 import Image from 'next/image';
 import Link from "next/link";
-import nextLogo from "../asset/next.svg";
-import vercelLogo from "../asset/vercel.svg";
+import nextLogo from "../../asset/next.svg";
+import vercelLogo from "../../asset/vercel.svg";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function About() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+          <code className="font-mono font-bold">src/app/about/page.js</code>
         </p>
-        <Link href="/nextjs13.3/about">go to about page</Link>
+        <Link href="/nextjs13.3/">go to home page</Link>
         <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
           <a
             className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
@@ -126,3 +126,27 @@ export default function Home() {
     </main>
   )
 }
+
+
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+
+// export async function generateMetadata(
+//   { params, searchParams }: Props,
+//   parent?: ResolvingMetadata,
+// ): Promise<Metadata> {
+//   // read route params
+//   const id = params.id;
+
+//   // fetch data
+
+//   // optionally access and extend (rather than replace) parent metadata
+
+//   return {
+//     title: "config-based metadata",
+    
+//   };
+// }
